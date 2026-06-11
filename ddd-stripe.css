@@ -1,0 +1,99 @@
+.payment_method_ddd_stripe > label {
+    display: none;
+}
+.wc_payment_method.payment_method_ddd_stripe {
+    background: #e7f6fc;
+    padding: 20px;
+    border-radius: 3px;
+	margin-top: 30px !important;
+	position: relative;
+}
+.woocommerce-checkout #payment .wc_payment_method .payment_box.payment_method_ddd_stripe {
+	position: static;
+    background: #fff !important;
+	padding: 25px !important;
+    border-radius: 3px;
+}
+.payment-info-title {
+    font-size: 16px;
+    color: #000;
+    position: absolute;
+    top: -28px;
+    left: 0;
+}
+.stripe-field-wrap {
+    padding: 5px 0;
+}
+.stripe-field-wrap label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #000;
+}
+.stripe-field-wrap .stripe-field {
+    background: #f4f4f4;
+    padding: 10px 10px;
+    border-radius: 5px;
+    border: 1px solid #e0e0e0;
+}
+.stripe-expiry-cvc-container {
+    display: flex;
+    column-gap: 10px;
+}
+.stripe-card-number-wrapper {
+    position: relative;
+}
+.stripe-card-number-wrapper .stripe-field-wrap {
+    padding-top: 0;
+    margin-top: -5px;
+}
+.stripe-card-brand {
+    position: absolute;
+    right: 10px;
+    bottom: 16px;
+}
+.stripe-card-brand .card-brand-item {
+    display: inline-block;
+    padding: 5px;
+    font-size: 9px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+    width: 38px;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 3px;
+}
+.card-brand-item.visa {
+    background: #1a1f71;
+}
+.card-brand-item.mastercard {
+    background: #000000;
+}
+.card-brand-item.amex {
+    background: #2e77bb;
+}
+.stripe-expiry-cvc-container .stripe-field-wrap {
+	width: 100%;
+}
+#ddd-stripe-errors {
+    color: #f00;
+}
+
+
+@media (min-width: 768px) {
+	.stripe-expiry-cvc-container .stripe-field-wrap {
+		width: 50%;
+	}
+}
+
+@media (max-width: 767px) {
+	.wc_payment_method.payment_method_ddd_stripe {
+		padding: 5px;
+	}
+	.woocommerce-checkout #payment .wc_payment_method .payment_box.payment_method_ddd_stripe {
+		padding: 15px !important;
+	}
+	.stripe-card-brand {
+		display: none;
+	}
+}
