@@ -368,9 +368,7 @@ add_action('rest_api_init', function () {
 function ddd_handle_stripe_webhook(WP_REST_Request $request) {
     $payload = $request->get_body();
     $sig_header = $_SERVER['HTTP_STRIPE_SIGNATURE'] ?? '';
-    //$endpoint_secret = 'whsec_nXYgtVaoiMM2AQ9cb6QcHjgYWjJpdAaA'; // update the webhook secret with the live one
-	
-	$endpoint_secret = 'whsec_9OzUDY9BZxdCOFI4GMi2vFtwF5aD1Xcd'; // DDD Live
+    $endpoint_secret = 'whsec_nXYgtVaoiMM2AQ9cb6QcHjgYWjJpdAaA'; // update the webhook secret with the live one
 
     try {
         $event = \Stripe\Webhook::constructEvent(
